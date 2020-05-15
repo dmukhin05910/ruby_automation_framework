@@ -1,0 +1,1 @@
+allure open C:\Users\dmukh\RubymineProjects\RubyTest\allure-report

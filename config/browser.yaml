@@ -1,0 +1,15 @@
+drivers:
+  chrome:
+    version: 81.0.4044.138
+  firefox:
+    version: 0.26.0
+remote:
+  host: "localhost"
+  port: "4444"
+  base_path: "wd/hub"
+  enable_vnc: true
+  enable_video: true
+  firefox:
+    version: "75.0" #available 75.0 and 76.0
+  chrome:
+    version: "81.0" #available 81.0 and 80.0

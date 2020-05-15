@@ -1,0 +1,4 @@
+tms_link: "https://example.org/tms/{}"
+issue_link: "https://example.org/tms/{}"
+tms_prefix: "TMS_"
+issue_prefix: "ISSUE_"
