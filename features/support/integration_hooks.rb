@@ -23,7 +23,7 @@ Around() do |scenario, block|
       end
     end
     #TODO change RubyTest/ when Mac
-    fileLine = fileLine.split(':in `', 2)[0].partition('RubyTest/').last
+    fileLine = fileLine.split(':in `', 2)[0].partition("#{$env["project"]}/").last
 
     "[#{severity}], [#{datetime}]: #{msg} (#{fileLine})\n"
   end
@@ -31,6 +31,14 @@ Around() do |scenario, block|
   $logger.info("Environment configurations:\n #{$env.to_yaml}")
   block.call
 end
+
+#Init test_rail
+Around() do |scenario, block|
+  $endpoints.test_rail_endpoint($env['project']).get_cases
+
+  block.call
+end
+
 #Remove old logs
 After() do |scenario|
   if scenario.failed?
