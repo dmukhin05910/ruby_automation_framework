@@ -125,8 +125,8 @@ To open generate allure and open in browser execute:
 allure open path/to/project/allure-report
 ```
 # Changelog
-21.05.2020 - Readme changes
-15.05.2020 - First commit 
+- 21.05.2020 - Readme changes
+- 15.05.2020 - First commit 
 
 # TODO
 - Implement testRail tests creation
