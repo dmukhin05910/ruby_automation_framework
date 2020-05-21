@@ -124,3 +124,11 @@ To open generate allure and open in browser execute:
 ```cmd
 allure open path/to/project/allure-report
 ```
+# Changelog
+21.05.2020 - Readme changes
+15.05.2020 - First commit 
+
+# TODO
+- Implement testRail tests creation
+- Implement testRail tests execution results parsing
+- Implement other browsers for Selenium
