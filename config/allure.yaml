@@ -1,4 +1,4 @@
-tms_link: "https://example.org/tms/{}"
+tms_link: "https://dmukhtest.testrail.io/index.php?/cases/view/{}"
 issue_link: "https://example.org/tms/{}"
-tms_prefix: "TMS_"
+tms_prefix: "TMS:"
 issue_prefix: "ISSUE_"

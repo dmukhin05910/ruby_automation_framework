@@ -5,9 +5,9 @@ module Service
     class BaseEndpoint
 
       def initialize(baseURI)
-        @rest_client = Faraday.new(baseURI, headers:{"Content-Type" => "application/json"}) do |c|
+        @rest_client = Faraday.new(baseURI, headers: {"Content-Type" => "application/json"}) do |c|
           c.use Faraday::Request::UrlEncoded
-          c.response :logger, $logger, bodies:true
+          c.response :logger, $logger, bodies: true
           c.adapter Faraday.default_adapter
         end
       end

@@ -1,9 +1,10 @@
 Feature: POST
 
   Background: Get REST Client
-    Given Postman API
+    Given Httpbin API
 
   @herokuapp @api_case
+    @TMS:
   Scenario Outline: Send Actor data to anything endpoint
     Given I have actors with <name> and <year>
     And Each actor have <role> and <numbers>
@@ -11,5 +12,5 @@ Feature: POST
     Then Responce should have all data from payload
     Examples:
       | name | year | role      | numbers |
-      | Jin  | 1995 | Some_Role | 1,2,3 |
-      | Rin  | 1996 | Some_Role | 3,2,1 |
+      | Jin  | 1995 | Some_Role | 1,2,3   |
+      | Rin  | 1996 | Some_Role | 3,2,1   |

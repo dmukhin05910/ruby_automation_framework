@@ -1,6 +1,12 @@
-require './service/models/objects/httpbin/base_httpbin'
+require './service/models/objects/base_object'
 
-module Service::Models::Objects::Httpbin
-  class PostFiles < BaseHttpbin
+module Service
+  module Models
+    module Objects
+      module Httpbin
+        class PostFiles < BaseObject
+        end
+      end
+    end
   end
 end
