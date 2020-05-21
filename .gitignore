@@ -3,6 +3,7 @@
 /allure-report
 /report
 /drivers
+/cmd
 
 #Ruby files
 *.gem

@@ -23,7 +23,7 @@ Around() do |scenario, block|
       end
     end
     #TODO change RubyTest/ when Mac
-    fileLine = fileLine.split(':in `', 2)[0].partition('RubyTest/').last
+    fileLine = fileLine.split(':in `', 2)[0].partition('ruby_automation_framework/').last
 
     "[#{severity}], [#{datetime}]: #{msg} (#{fileLine})\n"
   end
