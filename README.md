@@ -1,31 +1,30 @@
 # ruby_automation_framework
-This is cucumber based framework for automation testing on ruby  
-which include UI and API tests implementation  
-with good practice patterns.
+This is a behavior driven automation framework, written on Ruby and Gherkin,  
+implemented by cucumber, that include API and UI tests, that are pattern  oriented
 
 # Required gems 
-As Test runner is used gems:
+As Test Runner gems have been used:
 ```ruby
 gem 'cucumber', '~> 4.0.0.rc.6'
 gem 'multi_json', '~> 1.14', '>= 1.14.1'
 gem 'parallel_tests', '~> 2.32'
 ```
-For UI testing is used gems:  
+For UI testing have been used gems:  
 ```ruby
 gem 'selenium-webdriver', '~> 3.142', '>= 3.142.7'
 gem 'webdrivers', '~> 4.3'
 ```
-For API testing is used gems:
+For API testing have been used gems:
 ```ruby
 gem 'faraday', '~> 1.0', '>= 1.0.1'
 gem 'oj', '~> 3.10', '>= 3.10.6'
 gem 'virtus', '~> 1.0', '>= 1.0.5'
 ```
-For Assertion is used gems:
+For Assertion have been used gems:
 ```ruby
 gem 'rspec', '~> 3.9'
 ```
-For Reporting is used gems:
+For Reporting have been used gems:
 ```ruby
 gem 'allure-cucumber', '~> 2.13', '>= 2.13.4'
 gem 'logger', '~> 1.4', '>= 1.4.2'
@@ -85,7 +84,7 @@ Install project gems using
 ```ruby
 bundle install
 ```
-### Install selenoid and selenoid-ui (OPTIONAL)
+### Install Selenoid and Selenoid-ui (OPTIONAL)
 ### Confige Allure.yaml
 Set your allure data in [Allure file](config/allure.yaml).  
 Details: [Allure_cucumber](https://github.com/allure-framework/allure-ruby/blob/master/allure-cucumber/README.md)
