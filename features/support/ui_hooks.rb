@@ -63,14 +63,14 @@ Before('@ui_case') do |scenario|
         Webdrivers::Chromedriver.required_version = @browser["drivers"]["chrome"]["version"]
         Webdrivers::Chromedriver.update
         #init chrome webdriver
-        Selenium::WebDriver::Chrome::Service.driver_path = "drivers/chromedriver.exe"
+        Selenium::WebDriver::Chrome::Service.driver_path = self.mac? ? "drivers/chromedriver" : "drivers/chromedriver.exe"
         $driver = Selenium::WebDriver.for(:chrome)
       when :firefox
         #Download ff webdriver
         Webdrivers::Geckodriver.required_version = @browser["drivers"]["firefox"]["version"]
         Webdrivers::Geckodriver.update
         #init ff webdriver
-        Selenium::WebDriver::Firefox::Service.driver_path = "drivers/geckodriver.exe"
+        Selenium::WebDriver::Firefox::Service.driver_path = self.mac? ? "drivers/geckodriver" : "drivers/geckodriver.exe"
         $driver = Selenium::WebDriver.for(:firefox)
       else
         $logger.error 'Your remote driver not yet implemented'
@@ -120,6 +120,14 @@ After('@ui_case') do |scenario|
                           type: Allure::ContentType::PNG,
                           test_case: true)
   end
+end
+
+def windows?
+  (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
+end
+
+def mac?
+  (/darwin/ =~ RUBY_PLATFORM) != nil
 end
 
 

@@ -106,15 +106,12 @@ Set your project data in [Env file](config/env.yaml):
 `remote` - is need to run remote using selenoid  
 `waits` - selenium waits  
 ## Tests running in parallel
-### Windows 10:
+To execute tests in parallel use command:
 ```cmd
 bundle exec parallel_cucumber features/ -n 6 -o '-t  "@api_case or @ui_case" --format pretty --format AllureCucumber::CucumberFormatter --out report/allure-results'
 ```
 when  
 `@api_case or @ui_case` - cucumber tags  
-
-### Mac OS:
-TODO add.
 
 # Reporting
 Requiring Allure (installation details: [Allure installation](https://docs.qameta.io/allure/#_installing_a_commandline))  
@@ -124,7 +121,14 @@ To open generate allure and open in browser execute:
 ```cmd
 allure open path/to/project/allure-report
 ```
+#### Note: if you have infinity loading browser screen just change your IP address in browser section to 'localhost'
+#### Example : from 192.168.0.0:50000 to localhost:50000 
+
 # Changelog
+- 23.05.2020 :
+1) Readme changes
+2) Chrome driver version update
+3) Added support for Mac OS
 - 21.05.2020 - Readme changes
 - 15.05.2020 - First commit 
 
