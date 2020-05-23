@@ -47,7 +47,7 @@ After() do |scenario|
                         type: Allure::ContentType::TXT,
                         test_case: true)
 end
-
+#Class for multiple log output
 class MultiIO
   def initialize(*targets)
     @targets = targets

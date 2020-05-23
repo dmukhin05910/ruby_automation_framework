@@ -1,15 +1,25 @@
+#Local selenium data
 drivers:
   chrome:
+    #Version of chrome driver
     version: 83.0.4103.39
   firefox:
+    #Version of geckodriver
     version: 0.26.0
 remote:
+  #Selenoid host
   host: "localhost"
+  #Selenoid port
   port: "4444"
+  #Selenoid base path (As usual : wd/hub)
   base_path: "wd/hub"
+  #Is need to show current execution screen on selenoid-ui (true/false)
   enable_vnc: true
+  #Is need to record test runs (true/false)
   enable_video: true
   firefox:
+    #Version of firefox remote driver
     version: "75.0" #available 75.0 and 76.0
   chrome:
+    #Version of chrome remote driver
     version: "81.0" #available 81.0 and 80.0

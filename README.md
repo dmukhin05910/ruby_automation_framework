@@ -124,6 +124,7 @@ allure open path/to/project/allure-report
 #### Example : from 192.168.0.0:50000 to localhost:50000 
 
 # Changelog
+- 24.05.2020 - Framework commentating
 - 23.05.2020 :
 1) Readme changes
 2) Chrome driver version update

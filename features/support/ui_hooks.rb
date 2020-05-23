@@ -18,6 +18,7 @@ Before('@ui_case') do
   end
 end
 
+#Create selenium session
 Before('@ui_case') do |scenario|
   $logger.info("UI_SCENARIO: \"#{scenario.name}\"")
 #UI setting
@@ -92,7 +93,7 @@ Before('@ui_case') do |scenario|
       $driver.quit if $driver
     end
   end
-
+#Use existed capabilities for correctly log printing
   $remote_caps_log = $remote_caps_log.nil? ? @remote_caps.to_yaml : $remote_caps_log
 
   if ($env["remote"])
@@ -105,6 +106,7 @@ Before('@ui_case') do |scenario|
   end
 end
 
+#Initialize all available UI asserts
 Before('@ui_case') do
   $herokuapp_asserts = Assertions::Herokuapp::HerokuappAsserts.new
 end
@@ -122,10 +124,12 @@ After('@ui_case') do |scenario|
   end
 end
 
+#Check is current platform windows
 def windows?
   (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
 end
 
+#Check is current platform mac
 def mac?
   (/darwin/ =~ RUBY_PLATFORM) != nil
 end

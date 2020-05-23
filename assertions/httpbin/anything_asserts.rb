@@ -1,6 +1,6 @@
 module Assertions
   module Httpbin
-    class PostAsserts < BaseApiAsserts
+    class AnythingAsserts < BaseApiAsserts
       def initialize(response)
         super(response)
       end

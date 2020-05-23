@@ -1,5 +1,6 @@
 require 'allure-cucumber'
 
+#Load all Allure configs
 @allure = YAML.load(File.open("config/allure.yaml"))
 #Configure Allure for Cucumber
 AllureCucumber.configure do |c|
@@ -25,6 +26,7 @@ Around() do |scenario,block|
   block.call
 end
 
+#Generate Allure report
 at_exit do
   exec("allure generate report/allure-results")
 end

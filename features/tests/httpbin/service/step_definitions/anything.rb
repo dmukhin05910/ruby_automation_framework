@@ -18,5 +18,5 @@ When(/^I send POST request to with created payload to \/anything path$/) do
 end
 
 Then(/^Responce should have all data from payload$/) do
-  $httpbin_asserts.post_asserts(@post_response.json).verify_actors(@actor)
+  $httpbin_asserts.anything_asserts(@post_response.json).verify_actors(@actor)
 end

@@ -1,4 +1,5 @@
 module Page
+  #Action class created for wrapping selenium actions by logger
   class Actions
     def initialize(browser)
       @browser = browser

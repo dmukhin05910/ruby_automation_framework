@@ -1,4 +1,9 @@
+## Details : https://github.com/allure-framework/allure-ruby/blob/master/allure-cucumber/README.md
+#link to test cases
 tms_link: "https://example.org/tms/{}"
+#link to issues
 issue_link: "https://example.org/tms/{}"
+#TMS prefix for parsing from cucumber feature to tms_link
 tms_prefix: "TMS_"
+#Issue prefix for parsing from cucumber feature to tms_link
 issue_prefix: "ISSUE_"
