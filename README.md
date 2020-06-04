@@ -70,7 +70,7 @@ ruby_automation_framework/
 │               |── post/   # DTOs for post endpoint including builder pattern for Actors and Role classes
 │               |── base_httpbin.rb # Base httpbin DTO
 │               └── uuid.rb         # DTO for uuid endpoint
-│           └── base.rb             #
+│           └── base.rb     # Base DTO object
 ├── .gitignore 
 ├── Gemfile  
 ├── Gemfile.lock  
