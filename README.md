@@ -34,16 +34,18 @@ gem 'logger', '~> 1.4', '>= 1.4.2'
 ```ruby
 ruby_automation_framework/
 ├── assertions/
-│   |── herokuapp/    #Assertions for UI tests
 │   |── httpbin/      #Assertions for API tests
+│   |── webSDK/       #Assertions for UI tests
 │   |── base_api_asserts.rb #Base API assertion templates
 │   |── base_asserts.rb     #RSpec initializing and base assertion templates
 │   |── base_ui_asserts.rb  #Base UI assertion templates
 ├── config/
-│   |── allure.yaml   #Allure-report configurations
-│   |── browser.yaml  #Selenium configurations
-│   |── cucumber.yaml #Cucumber formatter config for allure-reporting
-│   └── env.yaml      #Main constants for each tests running
+│   |── allure.yaml         #Allure-report configurations
+│   |── browser.yaml        #Selenium configurations
+│   |── cucumber.yaml       #Cucumber formatter config for allure-reporting
+│   |── env.yaml            #Main constants for each tests running
+│   |── resolutions.yaml    #Screen resolutions for UI tests
+│   └── servers.yaml        #Server links for different environments
 ├── features/  
 │   └── support/  
 |       |──allure.rb        #Allure initializing , old report deletion and generation new
@@ -52,14 +54,12 @@ ruby_automation_framework/
 |       |──service_hooks.rb #Tests endpoints initializing
 |       └──ui_hooks.rb      #Web driver initializing with failed tests screen saver
 │   └── tests/
-│       |── herokuapp/      #UI tests
-│       └── httpbin/        #API tests 
+│       |── httpbin/  #API tests
+│       └── webSDK/   #UI tests 
 ├── pages/  
-│   |── herokuapp/    #Page Object patter pages
-│       |── ab_page.rb              # A/B page object for a_b_testing_page.feature
-│       └── add_remove_elements.rb  # Add/Remove page object for add_remove_page.feature
-│       └── main_page.rb            # Main page object for http://the-internet.herokuapp.com/
-│   └── actions.rb          # Wrapped selenium actions with logged         
+│   |── webSDK/       #Page Object patter pages for webSDK tests
+│   |── actions.rb          # Wrapped selenium actions with logged 
+│   └── base_page.rb        # Base object for each page extending from with methods which can be used on each page 
 ├── service/  
 │   └── endpoints/ 
 │       └── httpbin/
